@@ -1,0 +1,30 @@
+body{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+table, th, td {
+    border: 1px solid black;
+  }
+ 
+  tr{
+      background-color: rgb(90, 200, 210);
+  }
+  td,th{
+    padding: 7px;
+    
+  }
+  button{
+    margin-left: 10px;
+    padding: 10px;
+    width: 5rem;
+  }
+  
+  #title{
+    color: #ff0000;
+    font-size: 1.5rem;
+  }
+
+ nav{
+    background-color: blue;
+  }

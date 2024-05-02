@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User form</title>
+    <link href="style.css" rel="stylesheet"/>
+</head>
+<body>
+    <table>
+        <tr>
+            <th colspan="2" id="title" style="background-color: rgb(233, 231, 130);">User Form</th>
+        </tr>
+
+        <tr>
+            <td>Enter Name </td>
+            <td>
+                <input type="text" id="name" required>
+            </td>
+        </tr>
+
+        <tr>
+            <td>Enter Password </td>
+            <td>
+                <input type="text" id="password" required>
+            </td>
+        </tr>
+
+        <tr>
+            <td>Enter Address </td>
+            <td>
+                <textarea rows="4"></textarea>
+            </td>
+        </tr>
+
+        <tr>
+            <td>Select Games </td>
+            <td>
+                <input type="checkbox" value="Hockey"><label>Hockey</label> <br>
+                <input type="checkbox" value="Football"><label>Football</label><br>
+                <input type="checkbox" value="Cricket"><label>Cricket</label><br>
+                <input type="checkbox" value="Volleyball"><label>Volleyball</label><br>
+                <input type="checkbox" value="Badminton"><label>Badminton</label><br>
+
+            </td>
+        </tr>
+
+        <tr>
+            <td>Select Gender </td>
+            <td>
+                <input type="radio" value="Male"><label>Male</label> <br>
+                <input type="radio" value="Female"><label>Female</label><br>
+                <input type="radio" value="Other"><label>Other</label>
+            </td>
+        </tr>
+
+        <tr>
+            <td>Select Age </td>
+            <td>
+                <select id="age">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                    <option value="13">13</option>
+                    <option value="14">14</option>
+                    <option value="15">15</option>
+                    <option value="16">16</option>
+                    <option value="17">17</option>
+                    <option value="18">18</option>
+                    <option value="19">19</option>
+                    <option value="20">20</option>
+                </select>
+            </td>
+        </tr>
+
+        <tr>
+            <td colspan="2">
+                <input type="file" id="file">
+            </td>
+        </tr>
+
+        <tr>
+            <td colspan="2">
+                <button>Click Me</button>
+                <button>Reset</button>
+                <button>Submit</button>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

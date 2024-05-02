@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Facebook</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <style>
+      .navbar {
+        background-color: rgba(10, 47, 116, 0.904);
+      }
+
+      .navbar label {
+        color: #ffffff;
+      }
+      .gender-option{
+        display: flex;
+        flex-direction: row;
+        column-gap: 2rem;;
+      }
+
+      p{
+        color: rgb(33, 51, 186);
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <div class="container">
+        <a
+          style="
+            color: #ffffff;
+            font-weight: 500;
+            font-size: 3.5rem;
+            margin-left: 2rem;
+            padding-bottom: 1.2rem;
+            text-decoration: none;
+          "
+          href="#"
+          >facebook</a
+        >
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item" style="margin-left: 2rem">
+              <div style="display: flex; flex-direction: column">
+                <label>E-mail</label>
+                <input type="text" placeholder="Enter Email" class="form-control"/>
+                <div>
+                  <input type="checkbox" />&nbsp;<label>Keep me Login</label>
+                </div>
+              </div>
+            </li>
+
+            <li class="nav-item" style="margin-left: 2rem; margin-right: 2rem">
+              <div style="display: flex; flex-direction: column">
+                <label>Password</label>
+                <input type="text" placeholder="Enter Password" class="form-control"/>
+                <a style="color: #ffffff" href="index.html"> Register Here! </a>
+              </div>
+            </li>
+
+            <li class="nav-item" style="margin-left: 2rem; padding-top: 1.5rem">
+              <button class="btn btn-success">Login</button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container mt-5">
+      <div class="row">
+        <div class="col-md-6">
+          <p
+            style="font-size: 1.8rem; text-align: left; "
+          >
+            Facebook is useless without friends. Make More Friends.
+          </p>
+          <img src="facebook.jpg" width="100%" height="60%" />
+        </div>
+        <div class="col-md-6">
+          <p style="font-size: 3rem; text-align: left; ">
+            Create an Account
+          </p>
+          <p style="font-size: 1rem; text-align: left; ">
+            It's free and always will be.
+          </p>
+          <form>
+            <div class="form-group" style="display: flex; flex-direction: row">
+              <input
+                type="text"
+                placeholder="Firstname"
+                style="margin-right: 2rem"
+                class="form-control"
+              />
+              <input type="text" placeholder="Lastname" class="form-control" />
+            </div>
+            <div class="form-group">
+              <input type="email" placeholder="E-mail" class="form-control" />
+            </div>
+            <div class="form-group">
+              <input
+                type="email"
+                placeholder="Re-enter email"
+                class="form-control"
+              />
+            </div>
+            <div class="form-group">
+              <input
+                type="password"
+                placeholder="Password"
+                class="form-control"
+              />
+            </div>
+            <div class="form-group">
+              <input type="date" class="form-control" />
+            </div>
+
+            <div class="form-group">
+              <div class="gender-option">
+                <div>
+                   <input type="radio"  name="gender-option">&nbsp;<label style="color: rgb(33, 51, 186)">Male</label>
+                </div>
+                <div>
+                  <input type="radio" name="gender-option">&nbsp;<label style="color: rgb(33, 51, 186)">Female</label>
+               </div>
+               <div>
+                <input type="radio" name="gender-option">&nbsp;<label style="color: rgb(33, 51, 186)">Other</label>
+             </div>
+              </div>
+            </div>
+           
+            <div class="form-group">
+              <p style="font-size: 1rem; text-align: left; ">
+                By clicking create an account, you agree  to our Terms.
+              </p>
+              <div>
+                <button class="btn btn-success">Signup</button>
+              </div>
+              <p style="font-size: 1rem; text-align: left; margin-top: 1rem;">
+                Create a page for you.
+              </p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
