@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table Generation</title>
+</head>
+<body>
+     <input id="input1" type="text" placeholder="Enter like 3#3#3">
+     <input id="input2" type="text" placeholder="Enter like 3#3#3">
+     <button onclick="promptinput()">OK</button>
+     <div id="table1"></div>
+     <div id="table2"></div>
+     <div id="resulttable"></div>
+
+     <script>
+        function promptinput()
+        {
+           let input1 =document.getElementById('input1').value.split('#').map(Number);
+           let input2 =document.getElementById('input2').value.split('#').map(Number);
+
+           if (input1.length !== 3 || input2.length !== 3) 
+            {
+                alert("Please enter valid inputs in the format rows#columns#startNumber");
+                return;
+            }
+            let [row1,col1,start1] = input1;
+            let [row2,col2,start2] = input2;  
+
+            let table1value = collectablevalue(row1, col1, "Table 1");
+            let table2value = collectablevalue(row2, col2, "Table 2");
+
+            document.getElementById('table1').innerHTML = createtable(table1value,"Table 1");
+            document.getElementById('table2').innerHTML = createtable(table2value, "Table 2");
+            document.getElementById('resulttable').innerHTML = createresulttable(table1value,table2value);
+        } 
+
+       function collectablevalue(row,col,tablename)
+       {
+        let values = [];
+        for(let r=0; r<row; r++)
+        {
+            let rows=[];
+            for(let c=0; c<col; c++)
+            {
+                let value = prompt(`Enter a ${tablename} , row ${r+1}, column ${c+1}: `, "0");
+                rows.push(parseInt(value,10));
+            }
+            values.push(rows);
+        }
+        return values;
+       }
+
+        function createtable(values, tablename){
+            let tableHTML = `<caption>${tablename}</cation><table>`;
+                values.forEach(rows => {
+                    tableHTML += `<tr>`;
+                        rows.forEach(value => {
+                            tableHTML += `<td>${value}</td>`;
+                        });
+                    tableHTML += `</tr>`;    
+                });
+                tableHTML += `</table>`;
+                return tableHTML;
+        }
+
+
+        function createresulttable(table1value, table2value){
+            let tableHTML = `<caption>Result Table</caption><table>`;
+                for(let r=0; r<table1value.length; r++){
+                    tableHTML += `<tr>`;
+                        for(let c=0; c<table1value[r].length; c++)
+                        {
+                            let val1 = table1value[r][c];
+                             let val2 = table2value[r][c];
+                             let resultvalue = (val1 === val2) ? val1 : val1*val2;
+                             tableHTML += `<td> ${resultvalue}</td>`;
+                        }
+                        tableHTML += `</tr>`;    
+                }
+                tableHTML += `</table>`;
+                return tableHTML;
+        }
+
+
+     </script>
+</body>
+</html>
