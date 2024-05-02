@@ -1,0 +1,9 @@
+p{
+    text-align: justify;
+}
+
+.displayflex{
+    display: flex;
+    flex-direction: row;
+}
+
