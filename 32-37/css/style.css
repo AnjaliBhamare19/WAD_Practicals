@@ -1,0 +1,16 @@
+
+  p{
+    text-align: justify;
+  }
+
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 100;
+    padding: 20px;  /* Adjust as needed */
+    background-color: #f8f9fa;
+    border-right: 1px solid #dee2e6;
+    overflow-y: auto; /* Enable vertical scrolling */
+  }
